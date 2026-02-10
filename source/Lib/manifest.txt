@@ -1,5 +1,1 @@
-Author=
 Version=1.00
-B4A.DependsOn=
-B4i.DependsOn=
-B4J.DependsOn=JavaObject

@@ -5,15 +5,13 @@ Type=Class
 Version=9.85
 @EndOfDesignText@
 #Region Shared Files
-#CustomBuildAction: folders ready, %WINDIR%\System32\Robocopy.exe,"..\..\Shared Files" "..\Files"
-'Ctrl + click to sync files: ide://run?file=%WINDIR%\System32\Robocopy.exe&args=..\..\Shared+Files&args=..\Files&FilesSync=True
+'#CustomBuildAction: folders ready, %WINDIR%\System32\Robocopy.exe,"..\..\Shared Files" "..\Files"
+'#Macro: Title, Export as zip, ide://run?file=%B4X%\Zipper.jar&Args=%PROJECT_NAME%.zip
 #End Region
-
-'Ctrl + click to export as zip: ide://run?File=%B4X%\Zipper.jar&Args=Project.zip
-
 Sub Class_Globals
 	Private Root As B4XView
 	Private xui As XUI
+	Private obj1 As MyLibrary
 End Sub
 
 Public Sub Initialize
@@ -24,10 +22,15 @@ End Sub
 Private Sub B4XPage_Created (Root1 As B4XView)
 	Root = Root1
 	Root.LoadLayout("MainPage")
+	obj1.Initialize
+	If xui.IsB4A Then obj1.Name = "B4A"
+	If xui.IsB4i Then obj1.Name = "B4i"
+	If xui.IsB4J Then obj1.Name = "B4J"
+	B4XPages.SetTitle(Me, obj1.Name)
 End Sub
 
 'You can see the list of page related events in the B4XPagesManager object. The event name is B4XPage.
 
 Private Sub Button1_Click
-	xui.MsgboxAsync("Hello world!", "B4X")
+	xui.MsgboxAsync($"Hello ${obj1.Name}!"$, "B4X")
 End Sub
