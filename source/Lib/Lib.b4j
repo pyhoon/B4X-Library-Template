@@ -1,10 +1,11 @@
 ﻿AppType=StandardJava
 Build1=Default,b4j.example
-Group=Default Group
+Group=App
 Library1=jcore
+Module1=MyLibrary
 NumberOfFiles=0
 NumberOfLibraries=1
-NumberOfModules=0
+NumberOfModules=1
 Version=10.3
 @EndOfDesignText@
 ' Library Project Template

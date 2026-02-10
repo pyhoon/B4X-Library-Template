@@ -1,5 +1,5 @@
 ﻿B4A=true
-Group=Default Group
+Group=App
 ModulesStructureVersion=1
 Type=Class
 Version=9.85
