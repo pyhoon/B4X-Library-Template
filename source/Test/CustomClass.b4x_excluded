@@ -1,5 +1,5 @@
 ﻿' Custom Class
-' Version 0.10
+' Version 1.00
 Sub Class_Globals
 	Private mName As String
 End Sub
@@ -12,6 +12,6 @@ Public Sub getName As String
 	Return mName
 End Sub
 
-Private Sub setName (Name As String)
+Public Sub setName (Name As String)
 	mName = Name
 End Sub
