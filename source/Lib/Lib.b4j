@@ -2,14 +2,13 @@
 Build1=Default,b4j.example
 Group=App
 Library1=jcore
-Module1=MyLibrary
 NumberOfFiles=0
 NumberOfLibraries=1
-NumberOfModules=1
+NumberOfModules=0
 Version=10.3
 @EndOfDesignText@
-' Library Project Template
-' Version 1.00
+' Library Project Template Generator
+' Version 1.01
 #Region Project Attributes 
 	#CommandLineArgs:
 	#MergeLibraries: True 
@@ -22,14 +21,12 @@ Version=10.3
 '#Macro: Title, Create Template, ide://run?file=%JAVABIN%\jar.exe&WorkingDirectory=..\..&args=-cMf&args=..\release\B4X+Library.b4xtemplate&args=Lib\Files&args=Lib\$APPNAME$.*&args=Lib\*.bas&args=Lib\LICENSE&args=Lib\manifest.txt&args=Test\B4XMainPage.bas&args=Test\B4A\B4A.b4a&args=Test\B4A\Starter.bas&args=Test\B4A\Files&args=Test\B4i\B4i.b4i&args=Test\B4i\Files&args=Test\B4J\B4J.b4j&args=Test\B4J\Files&args=Test\Server\Server.b4j&args=Test\Shared+Files
 #Macro: Title, Create Template, ide://run?file=%JAVABIN%\jar.exe&WorkingDirectory=..\..&args=-cMf&args=..\release\B4X+Library.b4xtemplate&args=Lib\Files&args=Lib\$APPNAME$.*&args=Lib\*.bas&args=Lib\LICENSE&args=Lib\manifest.txt&args=Demo\B4XMainPage.bas&args=Demo\B4A\B4A.b4a&args=Demo\B4A\Starter.bas&args=Demo\B4A\Files&args=Demo\B4i\B4i.b4i&args=Demo\B4i\Files&args=Demo\B4J\B4J.b4j&args=Demo\B4J\Files&args=Demo\Server\Server.b4j&args=Demo\Shared+Files
 #Macro: Title, Release Folder, ide://run?file=%WINDIR%\SysWOW64\explorer.exe&Args=%PROJECT%\..\..\release
-#Macro: Title, Copy to AddLibs, ide://run?file=%COMSPEC%&args=/c&args=copy&args=%PROJECT%\..\..\release\B4X+Library.b4xtemplate&args=%ADDITIONAL%\..\B4X
+#Macro: Title, Copy to B4J AddLibs, ide://run?file=%COMSPEC%&args=/c&args=copy&args=%PROJECT%\..\..\release\B4X+Library.b4xtemplate&args=%ADDITIONAL%
 #End Region
 Sub Process_Globals
-	Private obj1 As MyLibrary
+
 End Sub
 
 Sub AppStart (Args() As String)
-	obj1.Initialize
-	obj1.Name = "Hello world!!!"
-	Log(obj1.Name)
+
 End Sub

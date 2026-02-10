@@ -19,9 +19,9 @@ Version=10.3
 #End Region
 #Region Macros
 #Macro: Title, Update Version, ide://run?file=%JAVABIN%\java.exe&Args=-jar&Args=%ADDITIONAL%\..\B4X\manifest-writer.jar&Args=%PROJECT%&Args=%PROJECT%&Args=Version&Args=add0.01
-#Macro: Title, Create B4xLib, ide://run?file=%JAVABIN%\jar.exe&WorkingDirectory=%PROJECT%&args=-cMf&args=..\..\release\%PROJECT_NAME%.b4xlib&args=*.bas&args=manifest.txt&args=LICENSE
-#Macro: Title, Release Folder, ide://run?file=%WINDIR%\SysWOW64\explorer.exe&Args=%PROJECT%\..\..\release
-#Macro: Title, Copy to AddLibs, ide://run?file=%COMSPEC%&args=/c&args=copy&args=%PROJECT%\..\..\release\%PROJECT_NAME%.b4xlib&args=%ADDITIONAL%\..\B4X
+#Macro: Title, Create B4xLib, ide://run?file=%JAVABIN%\jar.exe&WorkingDirectory=%PROJECT%&args=-cMf&args=..\%PROJECT_NAME%.b4xlib&args=*.bas&args=manifest.txt&args=LICENSE
+#Macro: Title, Project Folder, ide://run?file=%WINDIR%\SysWOW64\explorer.exe&Args=%PROJECT%\..
+#Macro: Title, Copy to B4X AddLibs, ide://run?file=%COMSPEC%&args=/c&args=copy&args=%PROJECT%\..\%PROJECT_NAME%.b4xlib&args=%ADDITIONAL%\..\B4X
 #End Region
 Sub Process_Globals
 	Private obj1 As MyLibrary
