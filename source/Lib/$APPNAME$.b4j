@@ -1,22 +1,34 @@
 ﻿AppType=StandardJava
 Build1=Default,b4j.example
-Group=Default Group
+Group=App
 Library1=jcore
+Module1=MyLibrary
 NumberOfFiles=0
 NumberOfLibraries=1
-NumberOfModules=0
-Version=8.31
+NumberOfModules=1
+Version=10.3
 @EndOfDesignText@
-'Non-UI application (console / server application)
+' Library Project Template
+' Version 1.00
 #Region Project Attributes 
 	#CommandLineArgs:
 	#MergeLibraries: True 
 #End Region
-
+#Region Additional Jars
+'#AdditionalJar: 
+#End Region
+#Region Macros
+#Macro: Title, Update Version, ide://run?file=%JAVABIN%\java.exe&Args=-jar&Args=%ADDITIONAL%\..\B4X\manifest-writer.jar&Args=%PROJECT%&Args=%PROJECT%&Args=Version&Args=add0.01
+#Macro: Title, Create B4xLib, ide://run?file=%JAVABIN%\jar.exe&WorkingDirectory=%PROJECT%&args=-cMf&args=..\..\release\%PROJECT_NAME%.b4xlib&args=*.bas&args=manifest.txt&args=LICENSE
+#Macro: Title, Release Folder, ide://run?file=%WINDIR%\SysWOW64\explorer.exe&Args=%PROJECT%\..\..\release
+#Macro: Title, Copy to AddLibs, ide://run?file=%COMSPEC%&args=/c&args=copy&args=%PROJECT%\..\..\release\%PROJECT_NAME%.b4xlib&args=%ADDITIONAL%\..\B4X
+#End Region
 Sub Process_Globals
-	
+	Private obj1 As MyLibrary
 End Sub
 
 Sub AppStart (Args() As String)
-	Log("Hello world!!!")
+	obj1.Initialize
+	obj1.Name = "Hello world!!!"
+	Log(obj1.Name)
 End Sub

@@ -18,10 +18,11 @@ Version=10.3
 '#AdditionalJar: 
 #End Region
 #Region Macros
-#Macro: Title, Update Version, ide://run?file=%JAVABIN%\java.exe&Args=-jar&Args=%ADDITIONAL%\..\B4X\manifest-writer.jar&Args=%PROJECT%&Args=%PROJECT%&Args=Version&Args=add0.01
-#Macro: Title, Create B4xLib, ide://run?file=%JAVABIN%\jar.exe&WorkingDirectory=%PROJECT%&args=-cMf&args=..\..\release\%PROJECT_NAME%.b4xlib&args=*.bas&args=manifest.txt&args=LICENSE
-#Macro: Title, Release folder, ide://run?file=%WINDIR%\SysWOW64\explorer.exe&Args=%PROJECT%\..\..\release
-#Macro: Title, Copy to AddLibs, ide://run?file=%COMSPEC%&args=/c&args=copy&args=%PROJECT%\..\..\release\%PROJECT_NAME%.b4xlib&args=%ADDITIONAL%\..\B4X
+' Do not use Test folder, use Demo folder so Lib folder is the current lib (alphabetical order) 
+'#Macro: Title, Create Template, ide://run?file=%JAVABIN%\jar.exe&WorkingDirectory=..\..&args=-cMf&args=..\release\B4X+Library.b4xtemplate&args=Lib\Files&args=Lib\$APPNAME$.*&args=Lib\*.bas&args=Lib\LICENSE&args=Lib\manifest.txt&args=Test\B4XMainPage.bas&args=Test\B4A\B4A.b4a&args=Test\B4A\Starter.bas&args=Test\B4A\Files&args=Test\B4i\B4i.b4i&args=Test\B4i\Files&args=Test\B4J\B4J.b4j&args=Test\B4J\Files&args=Test\Server\Server.b4j&args=Test\Shared+Files
+#Macro: Title, Create Template, ide://run?file=%JAVABIN%\jar.exe&WorkingDirectory=..\..&args=-cMf&args=..\release\B4X+Library.b4xtemplate&args=Lib\Files&args=Lib\$APPNAME$.*&args=Lib\*.bas&args=Lib\LICENSE&args=Lib\manifest.txt&args=Demo\B4XMainPage.bas&args=Demo\B4A\B4A.b4a&args=Demo\B4A\Starter.bas&args=Demo\B4A\Files&args=Demo\B4i\B4i.b4i&args=Demo\B4i\Files&args=Demo\B4J\B4J.b4j&args=Demo\B4J\Files&args=Demo\Server\Server.b4j&args=Demo\Shared+Files
+#Macro: Title, Release Folder, ide://run?file=%WINDIR%\SysWOW64\explorer.exe&Args=%PROJECT%\..\..\release
+#Macro: Title, Copy to AddLibs, ide://run?file=%COMSPEC%&args=/c&args=copy&args=%PROJECT%\..\..\release\B4X+Library.b4xtemplate&args=%ADDITIONAL%\..\B4X
 #End Region
 Sub Process_Globals
 	Private obj1 As MyLibrary
