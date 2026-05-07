@@ -2,7 +2,7 @@
 Group=Classes
 ModulesStructureVersion=1
 Type=Class
-Version=10.3
+Version=10.5
 @EndOfDesignText@
 ' Custom Class
 ' Version 1.00

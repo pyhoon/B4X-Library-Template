@@ -18,7 +18,7 @@ Version=10.5
 '#AdditionalJar: 
 #End Region
 #Region Macros
-#Macro: Title, Create Template, ide://run?File=%JAVABIN%\jar.exe&WorkingDirectory=..\..&Args=-cMf&Args=..\release\B4X+Library.b4xtemplate&Args=Lib\Files&Args=Lib\$APPNAME$.*&Args=Lib\*.bas&Args=Lib\LICENSE&Args=Lib\manifest.txt&Args=B4X\B4XMainPage.bas&Args=B4X\B4A\B4A.b4a&Args=B4X\B4A\Starter.bas&Args=B4X\B4A\Files&Args=B4X\B4i\B4i.b4i&Args=B4X\B4i\Files&Args=B4X\B4J\B4J.b4j&Args=B4X\B4J\Files&Args=B4X\Server\Server.b4j&Args=B4X\Shared+Files
+#Macro: Title, Create Template, ide://run?File=%JAVABIN%\jar.exe&WorkingDirectory=..&Args=-cMf&Args=..\..\release\B4X+Library.b4xtemplate&Args=*.bas&Args=LICENSE&Args=manifest.txt
 #Macro: Title, Release Folder, ide://run?File=%WINDIR%\SysWOW64\explorer.exe&Args=%PROJECT%\..\..\release
 #Macro: Title, Copy to B4J AddLibs, ide://run?File=%COMSPEC%&Args=/c&Args=copy&Args=%PROJECT%\..\..\release\B4X+Library.b4xtemplate&Args=%ADDITIONAL%
 #End Region
