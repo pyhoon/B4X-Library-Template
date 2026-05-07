@@ -1,12 +1,12 @@
 ﻿B4A=true
-Group=App
+Group=Classes
 ModulesStructureVersion=1
 Type=Class
 Version=9.85
 @EndOfDesignText@
 #Region Shared Files
-'#CustomBuildAction: folders ready, %WINDIR%\System32\Robocopy.exe,"..\..\Shared Files" "..\Files"
 '#Macro: Title, Export as zip, ide://run?file=%B4X%\Zipper.jar&Args=%PROJECT_NAME%.zip
+'#CustomBuildAction: folders ready, %WINDIR%\System32\Robocopy.exe,"..\..\Shared Files" "..\Files"
 #End Region
 Sub Class_Globals
 	Private xui As XUI

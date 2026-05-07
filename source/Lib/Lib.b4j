@@ -18,14 +18,30 @@ Version=10.5
 '#AdditionalJar: 
 #End Region
 #Region Macros
-#Macro: Title, Create Template, ide://run?File=%JAVABIN%\jar.exe&WorkingDirectory=..&Args=-cMf&Args=..\..\release\B4X+Library.b4xtemplate&Args=*.bas&Args=LICENSE&Args=manifest.txt
+'Step 1
+#Macro: Title, Copy Template, ide://run?File=%COMSPEC%&Args=/c&Args=copy&Args=%PROJECT%\Pakai-Server.b4j&Args=%PROJECT%\$APPNAME$.b4j
+'Step 2
+#Macro: Title, Open Template, ide://run?File=%WINDIR%\explorer.exe&Args=%PROJECT%\$APPNAME$.b4j
+'Step 3
+'Clean/Delete Macros inside $APPNAME$.b4j
+'Step 4
+#Macro: Title, Pack Template, ide://run?File=%JAVABIN%\jar.exe&WorkingDirectory=..\..&Args=-cMf&Args=..\release\B4X+Library.b4xtemplate&Args=Lib\Files&Args=Lib\$APPNAME$.*&Args=Lib\*.bas&Args=Lib\CustomClass.b4x_excluded&Args=Lib\Snippets\sample.txt&Args=Lib\LICENSE&Args=Lib\manifest.txt&Args=B4X\B4XMainPage.bas&Args=B4X\B4A\B4A.b4a&Args=B4X\B4A\Starter.bas&Args=B4X\B4A\Files&Args=B4X\B4i\B4i.b4i&Args=B4X\B4i\Files&Args=B4X\B4J\B4J.b4j&Args=B4X\B4J\Files&Args=B4X\server\server.b4j&Args=B4X\Shared+Files
+'Step 5
 #Macro: Title, Release Folder, ide://run?File=%WINDIR%\SysWOW64\explorer.exe&Args=%PROJECT%\..\..\release
+'Step 6
 #Macro: Title, Copy to B4J AddLibs, ide://run?File=%COMSPEC%&Args=/c&Args=copy&Args=%PROJECT%\..\..\release\B4X+Library.b4xtemplate&Args=%ADDITIONAL%
+' Release
+#Macro: Title, Update Manifest, ide://run?File=%ADDITIONAL%\manifest-writer.jar&Args=%PROJECT%&Args=%PROJECT%&Args=Author&Args=Your+Name&Args=Version&Args=1.00
+#Macro: Title, Create B4X Lib, ide://run?File=%JAVABIN%\jar.exe&WorkingDirectory=..&Args=-cMf&Args=..\release\MiniHtml.b4xlib&Args=Snippets&Args=MyLibrary.bas&Args=CustomClass.b4x_excluded&Args=manifest.txt&Args=LICENSE
 #End Region
 Sub Process_Globals
-
+	Private obj1 As MyLibrary
 End Sub
 
+'Download: <link>manifest-writer.jar|https://github.com/pyhoon/manifest-writer/releases/download/v2.20/manifest-writer.jar</link>
+'and save to B4J Additional Libraries folder
 Sub AppStart (Args() As String)
-
+	obj1.Initialize
+	obj1.Name = "My library works!"
+	Log(obj1.Name)
 End Sub

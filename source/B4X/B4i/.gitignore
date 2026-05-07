@@ -1,5 +1,5 @@
 # ignore files
-*.b4i.meta
+#*.b4i.meta
 *.otf
 *.ttf
 

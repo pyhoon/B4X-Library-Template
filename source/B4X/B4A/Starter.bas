@@ -1,5 +1,5 @@
 ﻿B4A=true
-Group=App
+Group=Services
 ModulesStructureVersion=1
 Type=Service
 Version=9.85

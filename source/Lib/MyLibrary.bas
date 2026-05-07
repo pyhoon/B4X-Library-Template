@@ -10,10 +10,12 @@ Sub Class_Globals
 	Private mName As String
 End Sub
 
+'Initializes the object. You can add parameters to this method if needed.
 Public Sub Initialize
 
 End Sub
 
+'This is just a sample code. Replace with your library code.
 Public Sub getName As String
 	Return mName
 End Sub
