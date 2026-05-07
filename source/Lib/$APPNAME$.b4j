@@ -6,10 +6,10 @@ Module1=MyLibrary
 NumberOfFiles=0
 NumberOfLibraries=1
 NumberOfModules=1
-Version=10.3
+Version=10.5
 @EndOfDesignText@
-' Library Project Template
-' Version 1.00
+' Library Project Template Generator
+' Version 1.10
 #Region Project Attributes 
 	#CommandLineArgs:
 	#MergeLibraries: True 
@@ -18,17 +18,20 @@ Version=10.3
 '#AdditionalJar: 
 #End Region
 #Region Macros
-#Macro: Title, Update Version, ide://run?file=%JAVABIN%\java.exe&Args=-jar&Args=%ADDITIONAL%\..\B4X\manifest-writer.jar&Args=%PROJECT%&Args=%PROJECT%&Args=Version&Args=add0.01
-#Macro: Title, Create B4xLib, ide://run?file=%JAVABIN%\jar.exe&WorkingDirectory=%PROJECT%&args=-cMf&args=..\%PROJECT_NAME%.b4xlib&args=*.bas&args=manifest.txt&args=LICENSE
-#Macro: Title, Project Folder, ide://run?file=%WINDIR%\SysWOW64\explorer.exe&Args=%PROJECT%\..
-#Macro: Title, Copy to B4X AddLibs, ide://run?file=%COMSPEC%&args=/c&args=copy&args=%PROJECT%\..\%PROJECT_NAME%.b4xlib&args=%ADDITIONAL%\..\B4X
+'Please remove unused files before creating B4X Lib
+#Macro: Title, Update Manifest, ide://run?File=%ADDITIONAL%\manifest-writer.jar&Args=%PROJECT%&Args=%PROJECT%&Args=Author&Args=Your+Name&Args=Version&Args=1.00
+#Macro: Title, Create B4X Lib, ide://run?File=%JAVABIN%\jar.exe&WorkingDirectory=..&Args=-cMf&Args=..\release\%PROJECT_NAME%.b4xlib&Args=Snippets&Args=MyLibrary.bas&Args=CustomClass.b4x_excluded&Args=manifest.txt&Args=LICENSE
+#Macro: Title, Release Folder, ide://run?File=%WINDIR%\SysWOW64\explorer.exe&Args=%PROJECT%\..\..\release
+#Macro: Title, Copy to B4X AddLibs, ide://run?File=%COMSPEC%&Args=/c&Args=copy&Args=%PROJECT%\..\..\release\%PROJECT_NAME%.b4xlib&Args=%ADDITIONAL%
 #End Region
 Sub Process_Globals
 	Private obj1 As MyLibrary
 End Sub
 
+'Download: <link>manifest-writer.jar|https://github.com/pyhoon/manifest-writer/releases/download/v2.20/manifest-writer.jar </link>
+'and save to B4J Additional Libraries folder
 Sub AppStart (Args() As String)
 	obj1.Initialize
-	obj1.Name = "Hello world!!!"
+	obj1.Name = "My library works!"
 	Log(obj1.Name)
 End Sub
