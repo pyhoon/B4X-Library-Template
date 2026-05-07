@@ -9,8 +9,8 @@ Version=9.85
 '#Macro: Title, Export as zip, ide://run?file=%B4X%\Zipper.jar&Args=%PROJECT_NAME%.zip
 #End Region
 Sub Class_Globals
-	Private Root As B4XView
 	Private xui As XUI
+	Private Root As B4XView
 	Private obj1 As MyLibrary
 End Sub
 

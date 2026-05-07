@@ -11,11 +11,11 @@ Module2=|relative|..\..\Lib\MyLibrary
 NumberOfFiles=1
 NumberOfLibraries=3
 NumberOfModules=2
-Version=10.3
+Version=10.5
 @EndOfDesignText@
-#Region Project Attributes 
+#Region Project Attributes
 	#MainFormWidth: 600
-	#MainFormHeight: 600 
+	#MainFormHeight: 600
 #End Region
 
 Sub Process_Globals

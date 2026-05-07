@@ -2,13 +2,14 @@
 Build1=Default,b4j.example
 Group=App
 Library1=jcore
+Module1=MyLibrary
 NumberOfFiles=0
 NumberOfLibraries=1
-NumberOfModules=0
-Version=10.3
+NumberOfModules=1
+Version=10.5
 @EndOfDesignText@
 ' Library Project Template Generator
-' Version 1.01
+' Version 1.10
 #Region Project Attributes 
 	#CommandLineArgs:
 	#MergeLibraries: True 
@@ -17,11 +18,9 @@ Version=10.3
 '#AdditionalJar: 
 #End Region
 #Region Macros
-' Do not use Test folder, use Demo folder so Lib folder is the current lib (alphabetical order) 
-'#Macro: Title, Create Template, ide://run?file=%JAVABIN%\jar.exe&WorkingDirectory=..\..&args=-cMf&args=..\release\B4X+Library.b4xtemplate&args=Lib\Files&args=Lib\$APPNAME$.*&args=Lib\*.bas&args=Lib\LICENSE&args=Lib\manifest.txt&args=Test\B4XMainPage.bas&args=Test\B4A\B4A.b4a&args=Test\B4A\Starter.bas&args=Test\B4A\Files&args=Test\B4i\B4i.b4i&args=Test\B4i\Files&args=Test\B4J\B4J.b4j&args=Test\B4J\Files&args=Test\Server\Server.b4j&args=Test\Shared+Files
-#Macro: Title, Create Template, ide://run?file=%JAVABIN%\jar.exe&WorkingDirectory=..\..&args=-cMf&args=..\release\B4X+Library.b4xtemplate&args=Lib\Files&args=Lib\$APPNAME$.*&args=Lib\*.bas&args=Lib\LICENSE&args=Lib\manifest.txt&args=Demo\B4XMainPage.bas&args=Demo\B4A\B4A.b4a&args=Demo\B4A\Starter.bas&args=Demo\B4A\Files&args=Demo\B4i\B4i.b4i&args=Demo\B4i\Files&args=Demo\B4J\B4J.b4j&args=Demo\B4J\Files&args=Demo\Server\Server.b4j&args=Demo\Shared+Files
-#Macro: Title, Release Folder, ide://run?file=%WINDIR%\SysWOW64\explorer.exe&Args=%PROJECT%\..\..\release
-#Macro: Title, Copy to B4J AddLibs, ide://run?file=%COMSPEC%&args=/c&args=copy&args=%PROJECT%\..\..\release\B4X+Library.b4xtemplate&args=%ADDITIONAL%
+#Macro: Title, Create Template, ide://run?File=%JAVABIN%\jar.exe&WorkingDirectory=..\..&Args=-cMf&Args=..\release\B4X+Library.b4xtemplate&Args=Lib\Files&Args=Lib\$APPNAME$.*&Args=Lib\*.bas&Args=Lib\LICENSE&Args=Lib\manifest.txt&Args=B4X\B4XMainPage.bas&Args=B4X\B4A\B4A.b4a&Args=B4X\B4A\Starter.bas&Args=B4X\B4A\Files&Args=B4X\B4i\B4i.b4i&Args=B4X\B4i\Files&Args=B4X\B4J\B4J.b4j&Args=B4X\B4J\Files&Args=B4X\Server\Server.b4j&Args=B4X\Shared+Files
+#Macro: Title, Release Folder, ide://run?File=%WINDIR%\SysWOW64\explorer.exe&Args=%PROJECT%\..\..\release
+#Macro: Title, Copy to B4J AddLibs, ide://run?File=%COMSPEC%&Args=/c&Args=copy&Args=%PROJECT%\..\..\release\B4X+Library.b4xtemplate&Args=%ADDITIONAL%
 #End Region
 Sub Process_Globals
 
